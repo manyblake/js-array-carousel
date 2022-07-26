@@ -1,5 +1,6 @@
 const slidesWrapper = document.querySelector(`.carousel__wrapper`);
 const nextArrow = document.querySelector(`.carousel__arrow--next`);
+const prevArrow = document.querySelector(`.carousel__arrow--prev`);
 
 const slides = [
   `./img/01.jpg`,
@@ -35,6 +36,20 @@ nextArrow.addEventListener("click", function () {
     currentIndex++;
   } else {
     currentIndex = 0;
+  }
+
+  const nextSlide = slidesElements[currentIndex];
+  nextSlide.classList.add(`carousel-slide--active`);
+});
+
+prevArrow.addEventListener("click", function () {
+  const slideActive = slidesElements[currentIndex];
+  slideActive.classList.remove(`carousel-slide--active`);
+
+  if (currentIndex > 0) {
+    currentIndex--;
+  } else {
+    currentIndex = slidesElements.length - 1;
   }
 
   const nextSlide = slidesElements[currentIndex];
