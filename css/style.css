@@ -47,3 +47,21 @@ menu {
   color: #bad;
   font-size: 32px;
 }
+
+.carousel__pagination {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+}
+
+.carousel__pagination button {
+  width: 16px;
+  height: 16px;
+  background-color: #bad;
+  border-radius: 50%;
+  border: none;
+}
+
+.carousel__pagination .active {
+  background-color: rebeccapurple;
+}
